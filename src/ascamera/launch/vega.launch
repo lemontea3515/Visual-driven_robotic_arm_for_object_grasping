@@ -1,0 +1,25 @@
+<launch>
+    <arg name="argPath" default="$(find ascamera)/configurationfiles"/>
+    <node pkg="ascamera" name="ascamera_vega" type="ascamera_node" respawn="true" output="screen">
+        <!-- usb bus number: -1 not specified-->
+        <param name = "usb_bus_no" type="int" value="-1"/>
+        <!-- usb path(port numbers): "null" not specified-->
+        <param name = "usb_path" type="str" value="null"/>
+        <!-- confiPath: configuration file path -->
+        <param name = "confiPath" type="str" value="$(arg argPath)"/>
+
+        <!-- color_pcl: Color point cloud.
+             Precondition: It is necessary to turn on depth and RGB alignment in the configuration file.
+             (Default alignment of configuration file) -->
+        <param name = "color_pcl" type="boolean" value="false"/>
+        <param name = "pub_tfTree" type="boolean" value="true"/>
+
+    </node>
+
+<!-- add nodes to enable multi camera activation: usb_bus_no and usb_path should be different -->
+    <!-- <node pkg="ascamera" name="ascamera_vega_2" type="ascamera_node" respawn="true" output="screen">
+        <param name = "usb_bus_no" type="int" value="2"/>
+        <param name = "usb_path" type="str" value="2.1"/>
+        <param name = "confiPath" type="str" value="$(arg argPath)"/>
+    </node> -->
+</launch>

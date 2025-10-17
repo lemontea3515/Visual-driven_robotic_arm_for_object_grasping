@@ -1,0 +1,11 @@
+<launch>
+    <arg name="argPath" default="$(find ascamera)/configurationfiles"/>
+    <node pkg="ascamera" name="ascamera_changA" type="ascamera_node" respawn="true" output="screen">
+        <!-- usb bus number: -1 not specified-->
+        <param name = "usb_bus_no" type="int" value="-1"/>
+        <!-- usb path(port numbers): "null" not specified-->
+        <param name = "usb_path" type="str" value="null"/>
+        <!-- confiPath: configuration file path -->
+        <param name = "confiPath" type="str" value="$(arg argPath)"/>
+    </node>
+</launch>

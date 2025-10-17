@@ -1,0 +1,2 @@
+ascam_visual:ascamera:astra_tracker:yahboomcar_mediapipe:yahboomcar_msgs
+-DCATKIN_DEVEL_PREFIX=/home/rm/ascam_ws/devel -DCMAKE_INSTALL_PREFIX=/home/rm/ascam_ws/install -G Unix Makefiles

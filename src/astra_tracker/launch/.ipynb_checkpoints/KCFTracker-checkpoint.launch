@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find astra_camera)/launch/astraproplus.launch"/>
+    <!-- 距离相机的范围【0.4米，8米】，否则无效-->
+    <node name="KCF_Tracker" pkg="astra_tracker" type="KCFTracker_node" required="true" output="screen"/>
+</launch>

@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="yahboomcar_mediapipe" type="07_FaceDetection.py" name="FaceDetectionNode" required="true" output="screen"/>
+</launch>

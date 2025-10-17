@@ -1,0 +1,3 @@
+<launch>
+    <node pkg="yahboomcar_mediapipe" type="09_VirtualPaint.py" name="paint_node" required="true" output="screen"/>
+</launch>

@@ -1,0 +1,15 @@
+<launch>
+    <arg name="argPath" default="$(find ascamera)/configurationfiles"/>
+    <node pkg="ascamera" name="ascamera_hp60c" type="ascamera_node" respawn="true" output="screen">
+
+        <!-- confiPath: configuration file path -->
+        <param name = "confiPath" type="str" value="$(arg argPath)"/>
+
+        <!-- color_pcl: Color point cloud.
+             Precondition: It is necessary to turn on depth and RGB alignment in the configuration file.
+             (Default alignment of configuration file) -->
+        <param name = "color_pcl" type="boolean" value="false"/>
+	    <param name = "pub_tfTree" type="boolean" value="true"/>
+
+    </node>
+</launch>

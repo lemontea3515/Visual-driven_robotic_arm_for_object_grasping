@@ -1,0 +1,8 @@
+<launch>
+    <arg name="argPath" default="$(find ascamera)/configurationfiles"/>
+    <node pkg="ascamera" name="ascamera" type="ascamera_node" respawn="true" output="screen">
+        <!-- confiPath: configuration file path -->
+        <param name = "confiPath" type="str" value="$(arg argPath)"/>
+	<param name = "pub_tfTree" type="boolean" value="true"/>
+    </node>
+</launch>

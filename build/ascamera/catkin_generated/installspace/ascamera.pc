@@ -1,0 +1,8 @@
+prefix=/home/rm/ascam_ws/install
+
+Name: ascamera
+Description: Description of ascamera
+Version: 1.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -1,0 +1,9 @@
+<launch>
+    <arg name="tracker_type" default="color"
+         doc="tracker type ['BOOSTING', 'MIL', 'KCF', 'TLD', 'MEDIANFLOW', 'MOSSE', 'CSRT', 'color']"/>
+	<!-- 距离相机的范围【0.4米，8米】，否则无效-->
+    <node name="Astra_Tracker" pkg="astra_tracker" type="astra_Tracker.py" required="true" output="screen">
+        <!-- 跟踪算法可选：'BOOSTING', 'MIL', 'KCF', 'TLD', 'MEDIANFLOW', 'GOTURN', 'color'-->
+        <param name="tracker_type" type="string" value="$(arg tracker_type)"/>
+    </node>
+</launch>

@@ -1,0 +1,26 @@
+<launch>
+    <arg name="argPath" default="$(find ascamera)/configurationfiles"/>
+    <node pkg="ascamera" name="ascamera_kunlun_a" type="ascamera_node" respawn="true" output="screen">
+
+        <!-- set the resolution and frame rate -->
+        <param name = "depth_width" type="int" value="-1"/>
+        <param name = "depth_height" type="int" value="-1"/>
+        <param name = "peak_width" type="int" value="-1"/>
+        <param name = "peak_height" type="int" value="-1"/>
+        <param name = "fps" type="int" value="-1"/>
+
+        <!-- usb bus number: -1 not specified-->
+        <param name = "usb_bus_no" type="int" value="-1"/>
+        <!-- usb path(port numbers): "null" not specified-->
+        <param name = "usb_path" type="str" value="null"/>
+        <!-- confiPath: configuration file path -->
+        <param name = "confiPath" type="str" value="$(arg argPath)"/>
+    </node>
+
+<!-- add nodes to enable multi camera activation -->
+    <!-- <node pkg="ascamera" name="ascamera_kunlun_a_ln_2" type="ascamera_node" respawn="true" output="screen">
+        <param name = "usb_bus_no" type="int" value="-1"/>
+        <param name = "usb_path" type="str" value="null"/>
+        <param name = "confiPath" type="str" value="$(arg argPath)"/>
+    </node> -->
+</launch>

@@ -1,0 +1,8 @@
+prefix=/home/rm/ascam_ws/devel
+
+Name: astra_tracker
+Description: Description of astra_tracker
+Version: 0.0.0
+Cflags: -I/home/rm/ascam_ws/devel/include
+Libs: -L${prefix}/lib 
+Requires: 
