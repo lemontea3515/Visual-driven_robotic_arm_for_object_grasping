@@ -1,5 +1,0 @@
-<launch>
-    <include file="$(find ascamera)/launch/hp60c.launch"/>
-    <!-- 距离相机的范围【0.2米，4米】，否则无效-->
-    <node name="KCF_Tracker" pkg="astra_tracker" type="KCFTracker_node" required="true" output="screen"/>
-</launch>

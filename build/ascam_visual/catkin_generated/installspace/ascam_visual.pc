@@ -1,8 +1,0 @@
-prefix=/home/rm/ascam_ws/install
-
-Name: ascam_visual
-Description: Description of ascam_visual
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 

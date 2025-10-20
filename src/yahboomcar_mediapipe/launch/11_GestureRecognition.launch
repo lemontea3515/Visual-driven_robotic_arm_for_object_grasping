@@ -1,3 +1,0 @@
-<launch>
-    <node pkg="yahboomcar_mediapipe" type="11_GestureRecognition.py" name="GestureRecognition_node" required="true" output="screen"/>
-</launch>

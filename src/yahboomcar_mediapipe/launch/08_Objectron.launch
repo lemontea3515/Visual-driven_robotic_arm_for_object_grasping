@@ -1,3 +1,0 @@
-<launch>
-    <node pkg="yahboomcar_mediapipe" type="08_Objectron.py" name="ObjectronNode" required="true" output="screen"/>
-</launch>

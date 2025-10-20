@@ -1,8 +1,0 @@
-prefix=/home/rm/ascam_ws/install
-
-Name: yahboomcar_mediapipe
-Description: Description of yahboomcar_mediapipe
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
